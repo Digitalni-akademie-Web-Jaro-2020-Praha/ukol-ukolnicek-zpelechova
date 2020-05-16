@@ -34,9 +34,10 @@ const updateTasks = () => {
 updateTasks()
 
 const addTask = () => {
-const newTask = document.querySelector('#new-task').value;
-tasks.push(newTask);
+const newTaskElm = document.querySelector('#new-task');
+tasks.push(newTaskElm.value);
 updateTasks();
+newTaskElm.value = '';
 }
 const btnElm = document.querySelector('button');
 btnElm.addEventListener('click', addTask);
