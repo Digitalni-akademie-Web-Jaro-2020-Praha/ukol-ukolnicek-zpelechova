@@ -35,7 +35,8 @@ updateTasks()
 
 const addTask = () => {
 const newTaskElm = document.querySelector('#new-task');
-tasks.push(newTaskElm.value);
+if (newTaskElm.value != '') {
+tasks.push(newTaskElm.value);}
 updateTasks();
 newTaskElm.value = '';
 }
